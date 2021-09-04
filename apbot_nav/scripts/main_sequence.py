@@ -1007,17 +1007,17 @@ class GoToDustbin(py_trees.behaviour.Behaviour):
         if result:
             vel.linear.x = .05
             vel_pub.publish(vel)
-            rospy.sleep(self.laser_data[180]//.05)
-            # if self.laser_data[180] > .1:                
-            #     rospy.sleep(2)
-            # elif self.laser_data[180] > .15:
-            #     rospy.sleep(3)
-            # elif self.laser_data[180] > .2:
-            #     rospy.sleep(4)
-            # elif self.laser_data[180] > .25:
-            #     rospy.sleep(5)
-            # elif self.laser_data[180] > .3:
-            #     rospy.sleep(6)
+            # rospy.sleep(self.laser_data[180]//.05)
+            if self.laser_data[180] > .1:                
+                rospy.sleep(2)
+            elif self.laser_data[180] > .15:
+                rospy.sleep(3)
+            elif self.laser_data[180] > .2:
+                rospy.sleep(4)
+            elif self.laser_data[180] > .25:
+                rospy.sleep(5)
+            elif self.laser_data[180] > .3:
+                rospy.sleep(6)
             vel.linear.x = 0
             vel_pub.publish(vel)
         return py_trees.common.Status.SUCCESS
