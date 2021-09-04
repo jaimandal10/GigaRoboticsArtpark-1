@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: apbot_description
+    relative_path: urdf/apbot.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/apbot.srdf
+  CONFIG:
+    author_name: Jai Mandal
+    author_email: jaimandal27@gmail.com
+    generated_timestamp: 1625120661
